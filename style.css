@@ -1,0 +1,73 @@
+/* 全体背景（黒くならないように） */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    180deg,
+    #fff6fb 0%,
+    #f0f8ff 50%,
+    #e6f4ff 100%
+  );
+  overflow: hidden;
+  font-family: "Rounded Mplus 1c", "Hiragino Maru Gothic ProN", sans-serif;
+}
+
+/* Canvas */
+canvas {
+  display: block;
+}
+
+/* 共通ボタン */
+button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 26px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #ff9acb 0%, #fff1a8 100%);
+
+  box-shadow:
+    0 8px 20px rgba(255, 183, 224, 0.45),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 12px 28px rgba(255, 183, 224, 0.55),
+    inset 0 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* スタートボタン */
+#startBtn {
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* 餌ボタン */
+#feedBtn {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  z-index: 10;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+/* 文字をさらにゆめかわにしたい場合 */
+#feedBtn::before {
+  content: "🍪 ";
+}
